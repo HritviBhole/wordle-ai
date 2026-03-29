@@ -2,7 +2,7 @@
 
 ## Overview
 
-An AI-powered Wordle solver that guarantees a solution in **≤4 guesses** using **Shannon entropy maximization** and **letter-frequency NLP techniques**. The system features a FastAPI backend, React frontend, PostgreSQL corpus database, and full Docker/cloud deployment.
+An AI-powered Wordle solver that guarantees a solution in **≤6 guesses** using **Shannon entropy maximization** and **letter-frequency NLP techniques**. The system features a FastAPI backend, React frontend, PostgreSQL corpus database, and full Docker/cloud deployment.
 
 ---
 

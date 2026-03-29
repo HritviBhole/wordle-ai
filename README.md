@@ -1,6 +1,6 @@
 # Wordle.AI — Entropy-Based Wordle Solver
 
-> An NLP-powered Wordle solver that guarantees convergence in ≤4 guesses using Shannon entropy maximization and letter-frequency analysis.
+> An NLP-powered Wordle solver that guarantees convergence in ≤6 guesses using Shannon entropy maximization and letter-frequency analysis.
 
 \---
 
