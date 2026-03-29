@@ -1,6 +1,6 @@
 """
 Wordle Solver - FastAPI Backend
-Uses entropy-based NLP algorithm to solve Wordle in ≤4 guesses.
+Uses entropy-based NLP algorithm to solve Wordle in ≤6 guesses.
 """
 
 from fastapi import FastAPI, HTTPException
@@ -123,7 +123,7 @@ def pick_best_guess(candidates: List[str], all_words: List[str], attempt: int) -
     Strategy:
     - Attempt 1: Use precomputed best opener ('trace' — 6.065 bits entropy)
     - Attempts 2-3: Score all candidates by entropy over remaining pool
-    - Attempt 4: Pick the highest-probability candidate directly
+    - Attempt 6: Pick the highest-probability candidate directly
     """
     if attempt == 1:
         return "trace", 6.065  # Best empirical opener
@@ -285,10 +285,10 @@ async def next_guess(req: NextGuessRequest):
 
     attempt = session["attempt"]
 
-    if attempt > 4:
+    if attempt > 6:
         raise HTTPException(
             status_code=422,
-            detail=f"Maximum attempts (4) reached. Remaining candidates: {session['candidates'][:5]}"
+            detail=f"Maximum attempts (6) reached. Remaining candidates: {session['candidates'][:5]}"
         )
 
     next_word, entropy_score = pick_best_guess(
@@ -307,7 +307,7 @@ async def next_guess(req: NextGuessRequest):
         top_candidates=top_candidates,
         attempt=attempt,
         solved=False,
-        message=f"Attempt {attempt}/4 — {new_count} candidates remain.",
+        message=f"Attempt {attempt}/6 — {new_count} candidates remain.",
         algorithm_info={
             "technique": "shannon_entropy_maximization",
             "bits_gained": round(bits_gained, 2),

@@ -116,7 +116,6 @@ uvicorn main:app --reload --port 8000
 cd frontend
 npm install
 $env:VITE\_API\_URL="http://localhost:8000"
-
 npm run dev
 # App at: http://localhost:3000
 ```

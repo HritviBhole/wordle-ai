@@ -64,14 +64,14 @@ function EmptyRow({ rowNum }) {
 }
 
 export default function GameBoard({ history, currentGuess, solved, loading }) {
-  const MAX_ROWS = 4;
+  const MAX_ROWS = 6;
 
   if (!history.length && !currentGuess) {
     // Welcome placeholder
     return (
       <div className="welcome-state">
         <div className="board-placeholder">
-          {Array.from({ length: 4 }).map((_, r) => (
+          {Array.from({ length: 6 }).map((_, r) => (
             <div key={r} className="placeholder-row">
               {Array.from({ length: 5 }).map((_, c) => (
                 <div key={c} className="placeholder-tile" style={{ animationDelay: `${(r * 5 + c) * 50}ms` }} />

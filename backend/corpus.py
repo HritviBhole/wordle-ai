@@ -128,6 +128,7 @@ WORD_LIST = [
     "vaunt","vegan","venal","vexed","video","vigil","viper","vogue","voila","vomit",
     "vying","wacky","wader","wafer","wager","waltz","warty","weedy","whack","whiff",
     "whine","whirl","whist","witty","woful","wormy","woven","wring","wrote","yearn",
+    "owing","steal","stole","stoke","stoke","stole","stoke","stoke","stoke","stoke","stoke",
 ]
 
 # Remove duplicates, ensure all 5-letter

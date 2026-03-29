@@ -6,7 +6,7 @@ export function useWordleGame() {
   const [sessionId, setSessionId] = useState(null);
   const [currentGuess, setCurrentGuess] = useState(null);
   const [attempts, setAttempts] = useState(0);
-  const maxAttempts = 4;
+  const maxAttempts = 6;
   const [candidates, setCandidates] = useState([]);
   const [history, setHistory] = useState([]);
   const [algorithmInfo, setAlgorithmInfo] = useState(null);
